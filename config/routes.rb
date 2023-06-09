@@ -6,4 +6,6 @@ Rails.application.routes.draw do
 
   get "/about", to: "about#index" # this will go to /app/controllers/about_controller.rb, method index
 
+  root to: "main#index"
+
 end
