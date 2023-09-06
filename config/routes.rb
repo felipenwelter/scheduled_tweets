@@ -6,6 +6,11 @@ Rails.application.routes.draw do
 
   get "about-us", to: "about#index", as: :about # this will go to /app/controllers/about_controller.rb, method index
 
+  get "contact-us", to: "contact#index", as: :contact
+  #get "see on url", to: "controller#method", as "route"
+    # then create a controller named "contact_controller" and a view under /views/contact/ called index.html.erb
+
   root to: "main#index"
+  # get "/", to: "main#index"
 
 end
