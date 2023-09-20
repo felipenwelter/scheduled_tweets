@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   #get "see on url", to: "controller#method", as "route"
     # then create a controller named "contact_controller" and a view under /views/contact/ called index.html.erb
 
+  get "sign_up", to: "registrations#new"
+  post "sign_up", to: "registrations#create"
+
   root to: "main#index"
   # get "/", to: "main#index"
 
