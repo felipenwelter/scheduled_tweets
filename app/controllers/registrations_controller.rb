@@ -9,6 +9,7 @@ class RegistrationsController < ApplicationController
         @user = User.new(user_params)
         # "user"=>{"email"=>"a@a.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}
         if @user.save
+            session[:user_id] = @user.id # this is session cookies, encrypted
             redirect_to root_path, notice: "Successfully created account"
         else
             render :new
