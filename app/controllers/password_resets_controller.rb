@@ -9,7 +9,7 @@ class PasswordResetsController < ApplicationController
         
         if @user.present?
             # send email
-            PasswordMailer.with(user: @user).reset_deliver_now
+            PasswordMailer.with(user: @user).reset.deliver_now
             #reset_deliver_now send now, take a second or more and block the request on the browser
             #sends in a backgroud job, doesn't block the request on the browser
         end
