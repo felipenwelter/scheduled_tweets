@@ -22,6 +22,9 @@ Rails.application.routes.draw do
   get "password/reset", to: "password_resets#new"
   post "password/reset", to: "password_resets#create"
 
+  get "password/reset/edit", to: "password_resets#edit"
+  post "password/reset/edit", to: "password_resets#update"
+
   delete "logout", to: "sessions#destroy"
 
   root to: "main#index"
