@@ -19,7 +19,7 @@ class RegistrationsController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:email, :password, :password_confirmation)
+        params.require(:user).permit(:email, :name, :password, :password_confirmation)
         # this will raise an error in case there is no :user. Otherwise we could just use params[:user]
     end
 
