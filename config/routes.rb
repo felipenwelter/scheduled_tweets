@@ -30,6 +30,9 @@ Rails.application.routes.draw do
   get "users", to: "users#list"
   delete "users", to: "users#destroy"
 
+  get "users/edit", to: "users#edit"
+  patch "users/edit", to: "users#update"
+
 
   root to: "main#index"
   # get "/", to: "main#index"
