@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   #get "twitter_account/:id"
   #delete "twitter_account/:id"
   
-
+  resources :tweets
 
 
 end
