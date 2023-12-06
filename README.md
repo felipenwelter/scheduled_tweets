@@ -13,7 +13,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Installation
 
-1. Clone the repository: `git clone [git@github.com:guidomingos/scheduled-tweet.git](https://github.com/felipenwelter/scheduled_tweets.git)`
+1. Clone the repository: `git clone https://github.com/felipenwelter/scheduled_tweets.git`
 2. Navigate to the directory: `cd scheduled-tweets`
 3. Install the required dependencies: `bundle install`
 4. Set up the database: `rails db:migrate`
