@@ -1,24 +1,26 @@
-# README
+# Scheduled Tweet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A straightforward application that allows you to create an account, login, forget password, connect to one or more Twitter accounts, and schedule tweets to be posted automatically. This is based on [GoRails](https://gorails.com/episodes/rails-for-beginners-part-1-installing-ruby-on-rails) classes.
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-* System dependencies
+## Prerequisites
+* [Ruby](https://www.ruby-lang.org/en/downloads/)
+* [Rails](https://rubyonrails.org/)
+* [Bundler](https://bundler.io/)
 
-* Configuration
+## Installation
 
-* Database creation
+1. Clone the repository: `git clone https://github.com/felipenwelter/scheduled_tweets.git`
+2. Navigate to the directory: `cd scheduled-tweets`
+3. Install the required dependencies: `bundle install`
+4. Set up the database: `rails db:migrate`
+5. Start the server rails server `rails s`
 
-* Database initialization
+The server should now be running at http://localhost:3000.
 
-* How to run the test suite
+## Usage
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Local environment is set to use SQLite as database.

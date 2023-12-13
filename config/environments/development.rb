@@ -69,4 +69,7 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.action_mailer.default_url_options = { host: "localhost:3000" }
+  config.active_job.queue_adapter = :sidekiq
+
+  config.log_level = :debug #by default it seems it's already in debug level in development environment  
 end

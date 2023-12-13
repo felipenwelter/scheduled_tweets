@@ -27,14 +27,23 @@ Rails.application.routes.draw do
 
   delete "logout", to: "sessions#destroy"
 
+  get "/auth/twitter/callback", to: "omniauth_callbacks#twitter"
+
   get "users", to: "users#list"
   delete "users", to: "users#destroy"
 
   get "users/edit", to: "users#edit"
   patch "users/edit", to: "users#update"
 
-
   root to: "main#index"
   # get "/", to: "main#index"
+  
+  resources :twitter_accounts
+  # creates index, show, new, create, edit, update and delete routes for us, eg:
+  #get "twitter_account/:id"
+  #delete "twitter_account/:id"
+  
+  resources :tweets
+
 
 end
