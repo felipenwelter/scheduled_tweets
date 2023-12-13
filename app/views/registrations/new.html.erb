@@ -6,6 +6,10 @@
     <%= render "shared/form_errors", form: form %>
 
     <div class="mb-3">
+        <%= form.label :name %>
+        <%= form.text_field :name, class: "form-control", placeholder: "Steve Jobs" %>
+    </div>
+    <div class="mb-3">
         <%= form.label :email %>
         <%= form.text_field :email, class: "form-control", placeholder: "steve@apple.com" %>
     </div>

@@ -1,0 +1,30 @@
+<h1>User List</h1>
+
+<table class="table">
+<thead>
+    <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Actions</th>
+    </tr>
+</thead>
+<tbody>
+
+    <% @UserList.each do |item| %>
+        <tr> 
+            <% if item.id != Current.user.id %>
+                <td> <%= item.name %> </td>
+                <td> <%= item.email %> </td>
+                <td>
+                    <%= link_to "Edit", {:controller => :users, :action => 'edit', :id => item.id }, :method => :edit, class: "btn btn-primary" %>
+                    <%= button_to "Delete", {:controller => :users, :action => 'destroy', :id => item.id }, :method => :delete, form: {data: {turbo_confirm: 'Are you sure you want to delete?'}}, class: "btn btn-danger" %>
+                </td>
+            <% end %> 
+
+        </tr>
+    <% end %>
+
+</tbody>
+</table>
+
+
