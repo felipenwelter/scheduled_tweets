@@ -7,8 +7,9 @@ class UsersController < ApplicationController
     end
 
     def destroy
-        userEmail = User.find_by(id: params[:id]).email
-        User.find(params[:id]).destroy
+        user = User.find(params[:id])
+        userEmail = user.email
+        user.destroy
         redirect_to users_path, notice: "User " + userEmail + " deleted successfully"
     end
 
