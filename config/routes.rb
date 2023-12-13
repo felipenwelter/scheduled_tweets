@@ -38,12 +38,16 @@ Rails.application.routes.draw do
   root to: "main#index"
   # get "/", to: "main#index"
   
+  get "/auth/twitter/callback", to: "omniauth_callbacks#twitter"
+
+  root to: "main#index"
+  # get "/", to: "main#index"
+
   resources :twitter_accounts
   # creates index, show, new, create, edit, update and delete routes for us, eg:
   #get "twitter_account/:id"
   #delete "twitter_account/:id"
   
   resources :tweets
-
 
 end
